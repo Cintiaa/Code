@@ -3,7 +3,7 @@ import os
 import numpy as np
 from PIL import Image
 
-eigenface = cv2.face.EigenFaceRecognizer_create(30, 9000)
+eigenface = cv2.face.EigenFaceRecognizer_create(160, 17580)
 fisherface = cv2.face.FisherFaceRecognizer_create()
 lbph = cv2.face.LBPHFaceRecognizer_create()
 
