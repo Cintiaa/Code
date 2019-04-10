@@ -3,15 +3,15 @@ import numpy as np
 import os
 from PIL import Image
 
-detectorFacial = cv2.CascadeClassifier('cascades/data/haarcascade_frontalface_alt2.xml')
+detectorFacial = cv2.CascadeClassifier('../cascades/data/haarcascade_frontalface_alt2.xml')
 reconhecedorFacial = cv2.face.FisherFaceRecognizer_create()
-reconhecedorFacial.read('classificador/FisherYale.yml')
+reconhecedorFacial.read('../classificador/FisherYale.yml')
 
 totalAcertos = 0
 percentalAcertos = 0.0
 totalConfianca = 0.0
 
-caminhos = [os.path.join('databases/yalefaces/teste', f) for f in os.listdir('databases/yalefaces/teste')]
+caminhos = [os.path.join('../databases/yalefaces/teste', f) for f in os.listdir('../databases/yalefaces/teste')]
 for caminhoImagem in caminhos:
     imagemFace = Image.open(caminhoImagem).convert('L')
     imagemFaceNP = np.array(imagemFace, 'uint8')
