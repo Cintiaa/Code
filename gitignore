@@ -1,4 +1,5 @@
 .idea/
 
-src/databases
+src/databases/imagefaces
+src/databases/yalefaces
 src/classificador
