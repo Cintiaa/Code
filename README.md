@@ -1,6 +1,6 @@
 # Code
 
-Tecnologias utilizadas
+TECNOLOGIAS UTILIZADAS
 
 OpenCV 4.0.1
 
@@ -10,7 +10,7 @@ pip 9.0.1
 
 
 
-diretório yale
+DIRETÓRIO YALE
 
 treinamento_yale
  - Nessa classe é realizado o treinamento e geração de classificadores,
@@ -27,7 +27,7 @@ lbph_yale_test
  - Nessa classe são realizados testes utilizando o classificador lbphfaces gerado
 
 
-diretório teste
+DIRETÓRIO TESTE
 
 captura
  - Realiza a captura de imagens para a criação de uma base de dados
