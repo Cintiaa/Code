@@ -3,13 +3,13 @@ import os
 import numpy as np
 from PIL import Image
 
-eigenface = cv2.face.EigenFaceRecognizer_create(160, 17580)
+eigenface = cv2.face.EigenFaceRecognizer_create()
 fisherface = cv2.face.FisherFaceRecognizer_create()
 lbph = cv2.face.LBPHFaceRecognizer_create()
 
 
 def getImagemComId():
-    caminhos = [os.path.join('databases/yalefaces/treinamento', f) for f in os.listdir('databases/yalefaces/treinamento')]
+    caminhos = [os.path.join('./databases/yalefaces/treinamento', f) for f in os.listdir('./databases/yalefaces/treinamento')]
     faces = []
     ids = []
     for caminhoImagem in caminhos:
@@ -27,16 +27,16 @@ print('Realizando treinamento com as imagens!')
 
 #criando classificador EigenFace
 eigenface.train(faces, ids)
-eigenface.write('classificador/EigenYale.yml')
+eigenface.write('./classificador/EigenYale.yml')
 
 #criando classificador FisherFace
 fisherface.train(faces, ids)
-fisherface.write('classificador/FisherYale.yml')
+fisherface.write('./classificador/FisherYale.yml')
 
 
 #criando classificador LBPH
 lbph.train(faces, ids)
-lbph.write('classificador/LBPHYale.yml')
+lbph.write('./classificador/LBPHYale.yml')
 
 
 print('Treinamento realizado')
