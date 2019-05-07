@@ -9,6 +9,25 @@ Python 3.6.7
 pip 9.0.1
 
 
+------------------***********------------------
+
+.gitignore
+
+.idea/
+
+src/databases/imagefaces
+
+src/databases/yalefaces
+
+src/classificador/EigenFace.yml
+src/classificador/EigenYale.yml
+src/classificador/FisherFace.yml
+src/classificador/FisherYale.yml
+src/classificador/LBPHFace.yml
+src/classificador/LBPHYale.yml
+
+------------------***********------------------
+
 
 DIRETÓRIO YALE
 
@@ -40,6 +59,4 @@ treinamento
 testelbph_imagens_capturadas
  - Nessa classe é feito o teste com a base de dados, utilizando a webcan do notebook 
  
-   
-
-DIRETÓRIO CLASSIFCADOR E DATABASE     
+    
