@@ -5,11 +5,11 @@ from PIL import Image
 
 eigenface = cv2.face.EigenFaceRecognizer_create()
 fisherface = cv2.face.FisherFaceRecognizer_create()
-lbph = cv2.face.LBPHFaceRecognizer_create(3, 20, 20, 20, 1850)
+lbph = cv2.face.LBPHFaceRecognizer_create()
 
 
 def getIdComImagem():
-    caminhos = [os.path.join('./databases/imagefaces', f) for f in os.listdir('./databases/imagefaces')]
+    caminhos = [os.path.join('../databases/imagefaces', f) for f in os.listdir('../databases/imagefaces')]
     faces = []
     ids = []
     for caminhoImagem in caminhos:
@@ -28,16 +28,16 @@ print('Realizando treinamento com as imagens!')
 
 #criando classificador EigenFace
 eigenface.train(faces, ids)
-eigenface.write('./classificador/EigenFace.yml')
+eigenface.write('../classificador/EigenFace.yml')
 
 #criando classificador FisherFace
 fisherface.train(faces, ids)
-fisherface.write('./classificador/FisherFace.yml')
+fisherface.write('../classificador/FisherFace.yml')
 
 
 #criando classificador LBPH
 lbph.train(faces, ids)
-lbph.write('./classificador/LBPHFace.yml')
+lbph.write('../classificador/LBPHFace.yml')
 
 
 print('Treinamento realizado')
