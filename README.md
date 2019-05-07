@@ -41,4 +41,5 @@ testelbph_imagens_capturadas
  - Nessa classe é feito o teste com a base de dados, utilizando a webcan do notebook 
  
    
-     
+
+DIRETÓRIO CLASSIFCADOR E DATABASE     

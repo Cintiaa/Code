@@ -34,6 +34,7 @@ while (True):
         cv2.putText(imagem, nome, (x, y +(a + 30)), font, 2, (0, 0, 255))
         cv2.putText(imagem, str(confianca), (x, y + (a+50)), font, 1, (0, 0, 255))
 
+#para fechar a camera aperte a tecla q
     cv2.imshow('Face', imagem)
     if cv2.waitKey(1) == ord('q'):
         break
